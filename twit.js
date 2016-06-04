@@ -35,12 +35,11 @@ function generateGif(tweet){
 				t.post('media/upload', { media_data: image }, function (err, data, response) {
 					
 
-				  // now we can reference the media and post a tweet (media will attach to the tweet)
 				  var mediaIdStr = data.media_id_string
 				  var params = { status: "@" + tweet.user.screen_name + ". Have fun (*^▽^*)", in_reply_to_status_id: tweet.id_str, media_ids: [mediaIdStr] }
 
 				  t.post('statuses/update', params, function (err, data, response) {	
-				  	console.log("SENT to " + tweet.user.screen_name);
+				  	console.log("tweet had been sent to " + tweet.user.screen_name);
 				  })
 				})
 			})
