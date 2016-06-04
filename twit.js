@@ -24,7 +24,7 @@ function generateGif(tweet){
 	var id = tweet.id;
 	var text = tweet.text;
 	var screen_name = tweet.user.screen_name;
-	var query = text.substring(text.indexOf(username));
+	var query = text.substring(text.indexOf(username) + username.length + 1);
 	giphy.search(query, function(err, res){
 		var image = res.data[0].images.fixed_height.url;
 		if( image != undefined){

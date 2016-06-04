@@ -1,0 +1,24 @@
+{
+  "name": "twitbot",
+  "version": "1.0.0",
+  "description": "convert tweet to gif",
+  "main": "twit.js",
+  "dependencies": {
+    "giphy-api": "^1.1.16",
+    "node-base64-image": "^1.0.1",
+    "twit": "^2.2.4",
+    "http-server": "^0.9.0",
+    "twitter": "^1.3.0",
+    "user-stream": "^0.0.7"
+  },
+  "devDependencies": {},
+  "scripts": {
+    "test": "t"
+  },
+  "keywords": [
+    "tweet",
+    "giphy"
+  ],
+  "author": "est",
+  "license": "ISC"
+}
