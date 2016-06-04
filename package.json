@@ -13,7 +13,7 @@
   },
   "devDependencies": {},
   "scripts": {
-    "stat": "node twit.js"
+    "start": "node twit.js"
   },
   "keywords": [
     "tweet",
