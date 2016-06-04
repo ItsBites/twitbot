@@ -1,10 +1,10 @@
 var tw = require('twit');
-var giphy = require('giphy-api')( "dc6zaTOxFJmzC");
 var http = require('http');
 var server = http.createServer();
 var username = '@estgfbot';
 var config = require("./config.js");
 var base64 = require('node-base64-image');
+var giphy = require('giphy-api')( config.giphy);
 
 var t = new tw({
 	consumer_key: config.consumer_key,
