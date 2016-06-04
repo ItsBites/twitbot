@@ -26,11 +26,11 @@ function generateGif(tweet){
 	var screen_name = tweet.user.screen_name;
 	var query = text.substring(text.indexOf(username) + username.length + 1);
 	giphy.search(query, function(err, res){
-		var image = res.data[0].images.fixed_height.url;
+		var image = res.data[0].images;
 		if( image != undefined){
 			var options = {string: true};
 
-			base64.encode(image,options, function(err,image){
+			base64.encode(image.fixed_height.url,options, function(err,image){
 
 				t.post('media/upload', { media_data: image }, function (err, data, response) {
 					
